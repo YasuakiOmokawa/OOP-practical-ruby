@@ -6,10 +6,10 @@ class MountainBike < Bicycle
     @rear_shock = args[:rear_shock]
   end
 
-  def spares
-    super.merge({
+  def local_spares
+    {
       rear_shock: rear_shock
-    })
+    }
   end
 
   def default_tire_size

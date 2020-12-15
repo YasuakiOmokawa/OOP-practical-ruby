@@ -5,10 +5,10 @@ class RoadBike < Bicycle
     @tape_color = args[:tape_color]
   end
 
-  def spares
-    super.merge({
+  def local_spares
+    {
       tape_color: tape_color
-    })
+    }
   end
 
   def default_tire_size

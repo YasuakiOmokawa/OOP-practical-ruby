@@ -17,7 +17,11 @@ class Bicycle
     {
       tire_size: tire_size,
       chain: chain
-    }
+    }.merge(local_spares)
+  end
+
+  def local_spares
+    {}
   end
 
   def default_chain
