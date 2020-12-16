@@ -9,3 +9,4 @@ puts Gear.new(chainring: 52, cog: 11, wheel: @wheel).gear_inches
 puts Gear.new(chainring: 52, cog: 11).ratio
 puts RoadBike.new(size: 'S', tape_color: 'red').spares
 puts MountainBike.new(size: 'S', front_shock: 'front', rear_shock: 'rear').spares
+puts RecumbentBike.new(flag: 'tall and orange').spares
