@@ -5,7 +5,7 @@ class Bicycle
 
   def initialize(args={})
     @size = args[:size]
-    @pats = args[:parts]
+    @parts = args[:parts]
   end
 
   def spares
