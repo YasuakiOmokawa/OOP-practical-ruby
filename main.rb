@@ -1,3 +1,6 @@
+Dir[File.expand_path("../lib/module", __FILE__) << '/*.rb'].each do | file |
+  require file
+end
 Dir[File.expand_path("../lib/", __FILE__) << '/*.rb'].each do | file |
   require file
 end
@@ -17,3 +20,9 @@ ending = Date.parse('2020/12/10')
 
 b = Bicycle.new(tire_size: 10)
 b.schedulable?(starting, ending)
+
+v = Vehicle.new
+v.schedulable?(starting, ending)
+
+m = Mechanic.new
+m.schedulable?(starting, ending)
