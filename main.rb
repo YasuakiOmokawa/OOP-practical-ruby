@@ -23,3 +23,6 @@ b.schedulable?(starting, ending)
 
 v = Vehicle.new
 v.schedulable?(starting, ending)
+
+m = Mechanic.new
+m.schedulable?(starting, ending)
