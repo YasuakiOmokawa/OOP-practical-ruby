@@ -20,3 +20,6 @@ ending = Date.parse('2020/12/10')
 
 b = Bicycle.new(tire_size: 10)
 b.schedulable?(starting, ending)
+
+v = Vehicle.new
+v.schedulable?(starting, ending)
