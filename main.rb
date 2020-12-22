@@ -42,3 +42,17 @@ p mountain_bike.size
 p mountain_bike.spares
 p mountain_bike.spares.size
 p mountain_bike.parts.size
+
+road_config = [
+  ['chain', '10-speed'],
+  ['tire_size', '23'],
+  ['tape_color', 'red']
+]
+p PartsFactory.build(road_config)
+mountain_config = [
+  ['chain', '10-speed'],
+  ['tire_size', '2.1'],
+  ['front_shock', 'Manitou', false],
+  ['rear_shock', 'Fox']
+]
+p PartsFactory.build(mountain_config)
