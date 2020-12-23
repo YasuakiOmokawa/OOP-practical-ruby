@@ -48,3 +48,13 @@ p mountain_bike.size
 p mountain_bike.spares
 p mountain_bike.spares.size
 p mountain_bike.parts.size
+recumbent_config = [
+  ['chain', '9-speed'],
+  ['tire_size', '28'],
+  ['flag', 'tall and orange']
+]
+recumbent_bike = Bicycle.new(
+  size: 'M',
+  parts: PartsFactory.build(recumbent_config)
+)
+p recumbent_bike.spares
