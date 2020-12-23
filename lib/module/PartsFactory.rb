@@ -1,10 +1,6 @@
 require 'ostruct'
 module PartsFactory
-  def self.build(
-    config,
-    parts_class = Parts
-  )
-
+  def self.build(config, parts_class = Parts)
     parts_class.new(
       config.collect {|part_config|
         create_part(part_config)
