@@ -1,10 +1,19 @@
 require 'minitest/autorun'
 require_relative '../lib/Gear'
 require_relative '../lib/Wheel'
+require_relative './module/DiameterizableInterfaceTest'
 
 class DiameterDouble
   def diameter
     10
+  end
+end
+
+class DiameterDoubleTest < MiniTest::Test
+  include DiameterizableInterfaceTest
+
+  def setup
+    @object = DiameterDouble.new
   end
 end
 class GearTest < MiniTest::Test
