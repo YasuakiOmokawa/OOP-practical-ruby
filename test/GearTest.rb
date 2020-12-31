@@ -4,7 +4,7 @@ require_relative '../lib/Wheel'
 require_relative './module/DiameterizableInterfaceTest'
 
 class DiameterDouble
-  def diameter
+  def width
     10
   end
 end
