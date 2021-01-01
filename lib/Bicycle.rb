@@ -1,18 +1,35 @@
 class Bicycle
-  include Schedulable
-
-  attr_reader :size, :parts
+  attr_reader :size, :chain, :tire_size
 
   def initialize(args={})
     @size = args[:size]
-    @parts = args[:parts]
+    @chain = args[:chain] || default_chain
+    @tire_size = args[:tire_size] || default_tire_size
+    post_initialize(args)
   end
 
   def spares
-    parts.spares
+    {
+      tire_size: tire_size,
+      chain: chain
+    }.merge(local_spares)
   end
 
-  def lead_days
-    1
+  def default_tire_size
+    raise NotImplementedError
   end
+
+  # need override
+  def post_initialize(args)
+    nil
+  end
+
+  def local_spares
+    {}
+  end
+
+  def default_chain
+    '10-speed'
+  end
+
 end
