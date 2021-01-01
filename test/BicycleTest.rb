@@ -1,5 +1,6 @@
 require 'minitest/autorun'
 require_relative './module/BicycleInterfaceTest'
+require_relative './module/BicycleSubclassTest'
 require_relative '../lib/Bicycle'
 
 class StubbedBike < Bicycle
@@ -8,6 +9,14 @@ class StubbedBike < Bicycle
   end
   def local_spares
     {saddle: 'painful'}
+  end
+end
+
+class StubbedBikeTest < MiniTest::Test
+  include BicycleSubclassTest
+
+  def setup
+    @object = StubbedBike.new
   end
 end
 class BicycleTest < MiniTest::Test
